@@ -1,6 +1,6 @@
 # Pakistan-Stock-Market-Sentiment-Analysis
 
-Analysis of pakistani companies stock price flunctuations based on social media sentiment (Using Vader and tweepy). Relevant research papers:
+Analysis of Pakistani companies stock price flunctuations based on social media sentiment (Using Vader and tweepy). Relevant research papers:
 
 * Twitter mood predicts the stock market [Johan Bollen, Huina Mao, Xiao-Jun Zeng]
 * Stock Prediction Using Twitter Sentiment Analysis [Anshul Mittal, Arpit Goel]
