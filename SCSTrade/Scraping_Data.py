@@ -1,10 +1,12 @@
 import csv, time, lxml, json, requests
 import pandas as pd
 from pandas.io.json import json_normalize
+from datetime import datetime
 import bs4 as bs
 import urllib3 as urllib
-import matplotlib.pyplot as plt
-%matplotlib inline
+from plotly import graph_objs as go
+from matplotlib.pyplot import *
+
 
 def get_urls():
     Base_url = "http://www.scstrade.com"
@@ -38,4 +40,13 @@ def jsontodataframe(): #collect OHLC data from scstrade
 
 
 def visualizedata():
-    df = pd.read_csv("/home/duke/PSMSA/SCSTrade/OHLC_values.csv)
+    df = pd.read_csv("/home/duke/PSMSA/SCSTrade/OHLC_values.csv")
+    fig = go.Figure(data=[go.Candlestick(x=df['Date'],
+                open=df['Open'],
+                high=df['High'],
+                low=df['Low'],
+                close=df['Close'])])
+
+    fig.show()
+
+visualizedata()
