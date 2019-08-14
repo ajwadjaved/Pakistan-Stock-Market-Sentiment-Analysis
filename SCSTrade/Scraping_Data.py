@@ -39,14 +39,21 @@ def jsontodataframe(): #collect OHLC data from scstrade
     df.to_csv("/home/duke/PSMSA/SCSTrade/OHLC_values.csv") #save .csv file for later usage
 
 
-def visualizedata():
-    df = pd.read_csv("/home/duke/PSMSA/SCSTrade/OHLC_values.csv")
-    fig = go.Figure(data=[go.Candlestick(x=df['Date'],
-                open=df['Open'],
-                high=df['High'],
-                low=df['Low'],
-                close=df['Close'])])
+def visualize_candlestick():
+     df = pd.read_csv("/home/duke/PSMSA/SCSTrade/OHLC_values.csv")
+     fig = go.Figure(data=[go.Candlestick(x=df['Date'],
+                 open=df['Open'],
+                 high=df['High'],
+                 low=df['Low'],
+                 close=df['Close'])])
 
-    fig.show()
+     fig.show()     
 
-visualizedata()
+def visualize_barchart(): 
+    #so far this function is really simple but doing this with
+    #multiple par ID's and switching between them will be slightly tricky
+    plt.bar(df['Date'], df['Change'], align='center', alpha=0.5)
+    plt.title('Date and Change in Stock Price')
+    plt.ylabel('Change')
+    plt.xlabel('Date')
+
