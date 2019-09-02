@@ -1,4 +1,4 @@
-# Pakistan-Stock-Market-Sentiment-Analysis
+## Pakistan-Stock-Market-Sentiment-Analysis
 
 Analysis of Pakistani companies stock price flunctuations based on social media sentiment (Using Vader and tweepy). Relevant research papers:
 
