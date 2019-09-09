@@ -2,4 +2,6 @@
 .ipynb_checkpoints
 =======
 .ipynb_checkpoints/*.ipynb
+Extract_Stock_Values.ipynb
+Scrap_Tweets.py
 >>>>>>> 0bf320f7c3712195bb4f49ea06072f193fbe5b17
