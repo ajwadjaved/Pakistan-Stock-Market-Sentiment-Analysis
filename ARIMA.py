@@ -1,3 +1,6 @@
+#ARIMA (https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average) analysis for just one company/ID from the .csv file
+#MSE is pretty high but we just need the general direction the stock price is going in
+
 import pandas as pd
 from pandas import read_csv
 from pandas import datetime
