@@ -18,8 +18,8 @@ def jsontodataframe(): #collect OHLC data from scstrade
     
     data = []
     for company in companies:
-        payload["par"] = companies[company]
-        #print(payload)
+        payload["par"] = companies[company] # this is equivalent to the ticker name (different every iteration)
+        print(payload)
         json_data = requests.post(url, json=payload).json() #download the json POST request from scstrade
         json_normalize(json_data)
         
@@ -57,7 +57,3 @@ def visualize_barchart():
     plt.ylabel('Change')
     plt.xlabel('Date')
     plt.show()
-
-jsontodataframe()
-#visualize_barchart()
-#visualize_candlestick()
